@@ -47,14 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B4B85BB1F51F6F400C05EBD /* FlexibleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FlexibleTableView.app; path = "/Users/danilblinov/ios-pills-time/FlexibleTableView/build/Debug-iphoneos/FlexibleTableView.app"; sourceTree = "<absolute>"; };
 		9B4B85BE1F51F6F400C05EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4B85C31F51F6F400C05EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B4B85C51F51F6F400C05EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4B85C81F51F6F400C05EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4B85CA1F51F6F400C05EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B4B85CF1F51F6F400C05EBD /* FlexibleTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewTests.xctest; path = "/Users/danilblinov/ios-pills-time/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewTests.xctest"; sourceTree = "<absolute>"; };
-		9B4B85DA1F51F6F400C05EBD /* FlexibleTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewUITests.xctest; path = "/Users/danilblinov/ios-pills-time/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewUITests.xctest"; sourceTree = "<absolute>"; };
 		9B4B86171F52151A00C05EBD /* SampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleController.swift; sourceTree = "<group>"; };
 		9B4B86191F52151A00C05EBD /* TableViewStructureDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewStructureDelegates.swift; sourceTree = "<group>"; };
 		9B4B861D1F52152000C05EBD /* BaseCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellModel.swift; sourceTree = "<group>"; };
@@ -71,6 +68,9 @@
 		9B4B862B1F52152000C05EBD /* StarWarsLogoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarWarsLogoTableViewCell.xib; sourceTree = "<group>"; };
 		9B4B862D1F52152000C05EBD /* TitleTableViewCelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTableViewCelTableViewCell.swift; sourceTree = "<group>"; };
 		9B4B862E1F52152000C05EBD /* TitleTableViewCelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTableViewCelTableViewCell.xib; sourceTree = "<group>"; };
+		9B4B863D1F529B6E00C05EBD /* FlexibleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FlexibleTableView.app; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableView.app"; sourceTree = "<absolute>"; };
+		9B4B863E1F529B6E00C05EBD /* FlexibleTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewTests.xctest; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewTests.xctest"; sourceTree = "<absolute>"; };
+		9B4B863F1F529B6E00C05EBD /* FlexibleTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewUITests.xctest; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +208,7 @@
 			);
 			name = FlexibleTableView;
 			productName = FlexibleTableView;
-			productReference = 9B4B85BB1F51F6F400C05EBD /* FlexibleTableView.app */;
+			productReference = 9B4B863D1F529B6E00C05EBD /* FlexibleTableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9B4B85CE1F51F6F400C05EBD /* FlexibleTableViewTests */ = {
@@ -226,7 +226,7 @@
 			);
 			name = FlexibleTableViewTests;
 			productName = FlexibleTableViewTests;
-			productReference = 9B4B85CF1F51F6F400C05EBD /* FlexibleTableViewTests.xctest */;
+			productReference = 9B4B863E1F529B6E00C05EBD /* FlexibleTableViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9B4B85D91F51F6F400C05EBD /* FlexibleTableViewUITests */ = {
@@ -244,7 +244,7 @@
 			);
 			name = FlexibleTableViewUITests;
 			productName = FlexibleTableViewUITests;
-			productReference = 9B4B85DA1F51F6F400C05EBD /* FlexibleTableViewUITests.xctest */;
+			productReference = 9B4B863F1F529B6E00C05EBD /* FlexibleTableViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

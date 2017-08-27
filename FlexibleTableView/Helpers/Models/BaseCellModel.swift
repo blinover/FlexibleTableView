@@ -12,6 +12,5 @@ class BaseCellModel: NSObject {
     typealias ClickCellBlock = (_ cellModel: BaseCellModel) -> Void
     
     var onClickCellBlock:ClickCellBlock?
-    var canBeSelected:Bool = true
     var cellIdentifier:String = ""
 }

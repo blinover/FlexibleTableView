@@ -14,19 +14,16 @@ private let chooseYourSideFontSize: CGFloat = 20.0
 class SampleViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let tableViewStructureDelegates: TableViewStructureDelegates = TableViewStructureDelegates()
+    var tableViewStructureDelegates: TableViewStructureDelegates!
     
     override func viewDidLoad() {
-        
         self.setupViewController()
     }
 
     
     func setupViewController()
     {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    
-        self.tableViewStructureDelegates.setupTableView(tableView: self.tableView)
+        self.tableViewStructureDelegates = TableViewStructureDelegates(tableView: self.tableView)
 
         
         let sectionsArray: NSArray = [BaseSectionHeaderModel()]
@@ -44,11 +41,9 @@ class SampleViewController: UIViewController {
         rowsArray.append(starWarsLogoCellModel)
         
         let titleCellModel = TitleCellModel(title: "CHOOSE YOUR SIDE", textColor: .white, aligment: .center, font: UIFont(name: halventicaBold, size: chooseYourSideFontSize))
-        
         rowsArray.append(titleCellModel)
         
         let sideButtonsCellModel = ChooseYourSideCellModel()
-        
         sideButtonsCellModel.onClickSideButton = {(side: StarWarsSide) -> Void in
             switch side {
             case .dark:
