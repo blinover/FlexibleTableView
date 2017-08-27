@@ -10,13 +10,11 @@ import UIKit
 
 class BaseSectionHeaderView: UITableViewHeaderFooterView {
     
-    class func sectionIdentifier() -> String
-    {
+    class func sectionIdentifier() -> String{
         return String(describing: self)
     }
     
-    func configureSection(sectionModel: BaseSectionHeaderModel,section:Int)
-    {
+    func configureSection(sectionModel: BaseSectionHeaderModel,section:Int){
         
     }
 }

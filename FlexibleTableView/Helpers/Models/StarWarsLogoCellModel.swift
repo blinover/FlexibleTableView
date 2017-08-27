@@ -8,10 +8,7 @@
 
 import UIKit
 
-class StarWarsLogoCellModel: BaseCellModel {
+struct StarWarsLogoCellModel: BaseCellModel {
+    var cellIdentifier: String = StarWarsLogoTableViewCell.cellIdentifier()
     
-    override init() {
-        super.init()
-        self.cellIdentifier = StarWarsLogoTableViewCell.cellIdentifier()
-    }
 }

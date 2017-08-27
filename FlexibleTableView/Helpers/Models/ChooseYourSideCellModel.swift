@@ -13,12 +13,14 @@ enum StarWarsSide: Int{
     case light = 1
 }
 
-class ChooseYourSideCellModel: BaseCellModel {
+struct ChooseYourSideCellModel: BaseCellModel {
     typealias SideButtonDidPressed = (_ side: StarWarsSide) -> Void
     
-    var onClickSideButton:SideButtonDidPressed?
-    override init() {
-        super.init()
-        self.cellIdentifier = ChooseYourSideTableViewCell.cellIdentifier()
+    var cellIdentifier: String = ChooseYourSideTableViewCell.cellIdentifier()
+        var onClickSideButton:SideButtonDidPressed?
+    
+    init(onClickSideButton: @escaping SideButtonDidPressed) {
+        self.onClickSideButton = onClickSideButton
     }
+    
 }

@@ -13,6 +13,7 @@ class TitleTableViewCelTableViewCell: BaseTableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     override func configureCell(cellModel: BaseCellModel) {
+        self.selectionStyle = .none
         if let model = cellModel as? TitleCellModel{
             self.titleLabel.text = model.titleString
             self.titleLabel.textAlignment = model.textAligment

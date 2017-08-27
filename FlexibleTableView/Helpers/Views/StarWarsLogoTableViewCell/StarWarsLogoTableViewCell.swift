@@ -10,5 +10,8 @@ import UIKit
 
 class StarWarsLogoTableViewCell: BaseTableViewCell {
 
+    override func configureCell(cellModel: BaseCellModel) {
+        self.selectionStyle = .none
+    }
     
 }

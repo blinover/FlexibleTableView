@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseSectionHeaderModel: NSObject {
-    var headerHeight: CGFloat = 0
-    var identifier: String = "BaseSectionHeaderView"
+protocol BaseSectionHeaderModel {
+    var headerHeight: CGFloat{ get set }
+    var identifier: String { get set }
 }

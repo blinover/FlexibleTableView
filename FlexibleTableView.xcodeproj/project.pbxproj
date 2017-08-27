@@ -27,6 +27,7 @@
 		9B4B863A1F52152000C05EBD /* StarWarsLogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B862B1F52152000C05EBD /* StarWarsLogoTableViewCell.xib */; };
 		9B4B863B1F52152000C05EBD /* TitleTableViewCelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B862D1F52152000C05EBD /* TitleTableViewCelTableViewCell.swift */; };
 		9B4B863C1F52152000C05EBD /* TitleTableViewCelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B862E1F52152000C05EBD /* TitleTableViewCelTableViewCell.xib */; };
+		9B4B86411F52AAE300C05EBD /* SimpleHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B86401F52AAE300C05EBD /* SimpleHeaderModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9B4B863D1F529B6E00C05EBD /* FlexibleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FlexibleTableView.app; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableView.app"; sourceTree = "<absolute>"; };
 		9B4B863E1F529B6E00C05EBD /* FlexibleTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewTests.xctest; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewTests.xctest"; sourceTree = "<absolute>"; };
 		9B4B863F1F529B6E00C05EBD /* FlexibleTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlexibleTableViewUITests.xctest; path = "/Users/danilblinov/GitHub/FlexibleTableView/build/Debug-iphoneos/FlexibleTableViewUITests.xctest"; sourceTree = "<absolute>"; };
+		9B4B86401F52AAE300C05EBD /* SimpleHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleHeaderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				9B4B861D1F52152000C05EBD /* BaseCellModel.swift */,
 				9B4B861E1F52152000C05EBD /* BaseSectionHeaderModel.swift */,
 				9B4B861F1F52152000C05EBD /* ChooseYourSideCellModel.swift */,
+				9B4B86401F52AAE300C05EBD /* SimpleHeaderModel.swift */,
 				9B4B86201F52152000C05EBD /* StarWarsLogoCellModel.swift */,
 				9B4B86211F52152000C05EBD /* TitleCellModel.swift */,
 			);
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4B86411F52AAE300C05EBD /* SimpleHeaderModel.swift in Sources */,
 				9B4B86371F52152000C05EBD /* ChooseYourSideTableViewCell.swift in Sources */,
 				9B4B86391F52152000C05EBD /* StarWarsLogoTableViewCell.swift in Sources */,
 				9B4B86311F52152000C05EBD /* ChooseYourSideCellModel.swift in Sources */,

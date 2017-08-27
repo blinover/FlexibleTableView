@@ -8,9 +8,8 @@
 
 import UIKit
 
-class BaseCellModel: NSObject {
-    typealias ClickCellBlock = (_ cellModel: BaseCellModel) -> Void
-    
-    var onClickCellBlock:ClickCellBlock?
-    var cellIdentifier:String = ""
+typealias ClickCellBlock = (_ cellModel: BaseCellModel) -> Void
+
+protocol BaseCellModel{
+    var cellIdentifier:String { get set }
 }

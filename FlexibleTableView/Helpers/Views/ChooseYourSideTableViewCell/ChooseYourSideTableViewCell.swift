@@ -15,6 +15,7 @@ class ChooseYourSideTableViewCell: BaseTableViewCell {
     private var cellModel: ChooseYourSideCellModel?
     
     override func configureCell(cellModel: BaseCellModel) {
+        self.selectionStyle = .none
         if let model = cellModel as? ChooseYourSideCellModel{
             self.cellModel = model
         }

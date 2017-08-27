@@ -22,7 +22,7 @@ class TableViewStructureDelegates: NSObject{
         tableView.dataSource = self
         self.tableView = tableView
         
-        self.sectionsArray = [BaseSectionHeaderView()]
+        self.sectionsArray = [SimpleHeaderModel()]
         self.sectionsRowsArray = [[]]
     }
     
@@ -46,15 +46,15 @@ extension TableViewStructureDelegates:  UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let sectionRows = self.sectionsRowsArray[indexPath.section] as! NSArray
-        let cellModel =  sectionRows[indexPath.row] as! BaseCellModel
-        
-        self.registerNib(self.tableView,cellName: cellModel.cellIdentifier)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellIdentifier, for: indexPath) as! BaseTableViewCell
-        cell.configureCell(cellModel: cellModel)
-        
-        
-        return cell
+        let anyModel = sectionRows[indexPath.row] as AnyObject // weird bridge to Obj-C as a _SwiftValue.
+        if let model =  anyModel as? BaseCellModel{
+            self.registerNib(self.tableView,cellName: model.cellIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as! BaseTableViewCell
+            cell.configureCell(cellModel: model)
+            return cell
+
+        }
+        return UITableViewCell()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
@@ -67,8 +67,11 @@ extension TableViewStructureDelegates:  UITableViewDataSource{
 extension TableViewStructureDelegates:  UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
-        let sectionModel =  self.sectionsArray[section] as! BaseSectionHeaderModel
-        return sectionModel.headerHeight
+        let anyModel = self.sectionsArray[section] as AnyObject // weird bridge to Obj-C as a _SwiftValue.
+        if let sectionModel =  anyModel as? BaseSectionHeaderModel{
+            return sectionModel.headerHeight
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
@@ -76,19 +79,22 @@ extension TableViewStructureDelegates:  UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        tableView.deselectRow(at: indexPath, animated: true)
-        let sectionRows = self.sectionsRowsArray[indexPath.section] as! NSArray
-        let baseCellModel = sectionRows[indexPath.row] as? BaseCellModel
-        if let closure = baseCellModel?.onClickCellBlock{
-            closure(baseCellModel!)
-        }
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        let sectionRows = self.sectionsRowsArray[indexPath.section] as! NSArray
+//        let baseCellModel = sectionRows[indexPath.row] as? BaseCellModel
+//        if let closure = baseCellModel?.onClickCellBlock{
+//            closure(baseCellModel!)
+//        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-        let sectionModel =  self.sectionsArray[section] as! BaseSectionHeaderModel
-        self.registerHeaderNib(self.tableView, headerName: sectionModel.identifier)
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: sectionModel.identifier) as! BaseSectionHeaderView
-        return header
+        let anyModel = self.sectionsArray[section] as AnyObject // weird bridge to Obj-C as a _SwiftValue.
+        if let sectionModel =  anyModel as? BaseSectionHeaderModel{
+            self.registerHeaderNib(self.tableView, headerName: sectionModel.identifier)
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: sectionModel.identifier) as! BaseSectionHeaderView
+            return header
+        }
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat{

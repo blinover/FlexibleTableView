@@ -16,9 +16,6 @@ class BaseTableViewCell: UITableViewCell {
     
     func configureCell(cellModel: BaseCellModel){
         
-        if cellModel.onClickCellBlock == nil{
-            self.selectionStyle = .none
-        }
     }
 
 }

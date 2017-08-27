@@ -26,7 +26,7 @@ class SampleViewController: UIViewController {
         self.tableViewStructureDelegates = TableViewStructureDelegates(tableView: self.tableView)
 
         
-        let sectionsArray: NSArray = [BaseSectionHeaderModel()]
+        let sectionsArray: NSArray = [SimpleHeaderModel()]
         
         self.tableViewStructureDelegates.sectionsArray = sectionsArray
         
@@ -43,8 +43,7 @@ class SampleViewController: UIViewController {
         let titleCellModel = TitleCellModel(title: "CHOOSE YOUR SIDE", textColor: .white, aligment: .center, font: UIFont(name: halventicaBold, size: chooseYourSideFontSize))
         rowsArray.append(titleCellModel)
         
-        let sideButtonsCellModel = ChooseYourSideCellModel()
-        sideButtonsCellModel.onClickSideButton = {(side: StarWarsSide) -> Void in
+        let sideButtonsCellModel = ChooseYourSideCellModel { (side) in
             switch side {
             case .dark:
                 self.showAler(title: "Dark Side", subTille: "You will be greeted by a Darth Vader", confirm: {
@@ -56,6 +55,7 @@ class SampleViewController: UIViewController {
                 })
             }
         }
+        
         rowsArray.append(sideButtonsCellModel)
         
         self.tableViewStructureDelegates.sectionsRowsArray = [rowsArray]
